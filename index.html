@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Map USA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>COVID-19 USA</h1>
+    <div class="menu">
+      <a href="#" id="showmap">KARTA</a>
+      <a href="#" id="showZarazeni">ZARAŽENI UKUPNO</a>
+      <a href="#" id="showUmrli">UMRLI UKUPNO</a>
+    </div>
+
+    <div class="container">
+      <div class="controls">
+        <label for="year">Odaberi godinu:</label>
+        <select id="year" onchange="loadData()">
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+        <div class="info"></div>
+      </div>
+
+      <div class="content">
+        <svg id="map"></svg>
+        <div id="ChartContainer">
+          <canvas id="lineChartCanvas"></canvas>
+          <canvas id="lineChartCanvas2"></canvas>
+          <canvas id="pieChartCanvas"></canvas>
+          <canvas id="pieChartCanvas2"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
